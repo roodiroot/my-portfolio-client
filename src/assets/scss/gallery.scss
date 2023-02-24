@@ -1,0 +1,120 @@
+.gallery {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+
+    /* .gallery__container */
+
+    &__container {
+        max-width: 940px;
+        height: 100%;
+
+        margin: 0 auto;
+        padding: 3.8rem 1rem;
+    }
+
+    /* .gallery__title */
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    /* .gallery__suptitle */
+
+    &__suptitle {
+        margin-bottom: 3.8rem;
+    }
+
+    /* .gallery__media-block */
+
+    &__media-block {
+        margin: 0 auto;
+
+
+    }
+}
+
+.media-block {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    column-gap: 1.3rem;
+    row-gap: 2.5rem;
+    grid-template-columns: 215px 215px 215px 215px;
+    @media (max-width: 1310px) {
+        grid-template-columns: 215px 215px 215px
+    }
+    @media (max-width: 703px) {
+        grid-template-columns: 215px 215px
+    }
+    @media (max-width: 467px) {
+        grid-template-columns: 215px
+    }
+
+    /* .media-block__item */
+
+    &__item {
+        width: 215px;
+    }
+
+    &__pht {
+        height: 150px;
+        overflow: hidden;
+        border-radius: 3px 3px 0 0 ;
+
+        margin-bottom: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__dsc-blc {
+        
+    }
+    &__title {
+        cursor: pointer;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.74);
+
+        margin-bottom: 7px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__dsc {
+        font-size: 13px;
+        line-height: 14px;
+        color: rgba(115, 115, 115, 0.74);
+        margin-bottom: 7px;
+    }
+    &__link {
+        width: 100%;
+        display: inline-block;
+        padding: .5rem;
+        border-top: #1c4064 1px solid;
+        border-bottom: #1c4064 1px solid;
+
+        font-size: 13px;
+        line-height: 14px;
+
+        a {
+            color: #1c4064;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__data {
+        font-size: 13px;
+        color: rgba(115, 115, 115, 0.74);
+        margin-bottom: 7px;
+    }
+}
+

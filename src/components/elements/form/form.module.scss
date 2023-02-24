@@ -1,0 +1,12 @@
+.form {
+    max-width: 600px;
+    padding: 17px;
+
+    &__row {
+        width: 100%;
+        display: flex;
+        gap: 1.4rem;
+
+        margin-bottom: 1.4rem;
+    }
+}

@@ -1,0 +1,106 @@
+.title-block {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #313131;
+}
+.suptitle-block {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto;
+    color: rgba(115, 115, 115, 0.74);
+}
+.about, .story {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* .about__container */
+
+    &__container {
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    /* .about__head */
+
+    &__head {
+        flex: 1 1 auto;
+        padding: 3.8rem 5px;
+    }
+
+    /* .about__title */
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    /* .about__suptitle */
+
+    &__suptitle {
+        margin-bottom: 3.8rem;
+    }
+
+    /* .about__services-block */
+
+    &__services-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @media (max-width: 641px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 400px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.icon-camera::before {
+    font-size: 3.45rem;
+}
+.icon-window::before {
+    font-size: 5.45rem;
+}
+.icon-meh::before {
+    font-size: 6rem;
+}
+.icon-cloud::before {
+    font-size: 4.45rem;
+}
+
+
+.story {
+    &__container {
+        max-width: 476px;
+        
+    }
+    &__galeryItem {
+        
+    }
+    &__textItem {
+        padding: 5px;
+    }
+    &__quoteBlock {
+        margin-top: 5rem;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2em;
+        letter-spacing: 0.02em;
+        color: #5b5b5b;
+        
+        display: flex;
+        justify-content: end;
+    }
+}

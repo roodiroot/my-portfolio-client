@@ -1,0 +1,30 @@
+.buttonStrokeStyle, .buttonBgStyle {
+    cursor: pointer;
+  
+    min-width: 7.6rem;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.07rem;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: .68rem .8rem .86rem ;
+  
+    transition: all linear .2s;
+  }
+  .buttonStrokeStyle {
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    &:hover {
+        background: rgba(255, 255, 255, 0.281);
+    }
+  }
+  .buttonBgStyle {
+    background: #CF404D;
+    border: 2px solid #CF404D;
+    border-radius: 4px;
+    &:hover {
+        background: #cf404ccd
+    }
+  }

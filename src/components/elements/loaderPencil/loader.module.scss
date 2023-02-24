@@ -1,0 +1,132 @@
+.pencilWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+
+    color: white;
+    font-size: 1.5rem;
+
+}
+.pencil {
+    @keyframes pencilAnimation {
+      0% {
+        transform: rotate(135deg);
+      }
+  
+      20% {
+        transform: rotate(315deg);
+      }
+  
+      45% {
+        transform: translateX(300px) rotate(315deg);
+      }
+  
+      55% {
+        transform: translateX(300px) rotate(495deg);
+      }
+  
+      100% {
+        transform: rotate(495deg);
+      }
+    }
+  
+    position: relative;
+    width: 150px;
+    height: 20px;
+    transform-origin: center;
+    transform: rotate(135deg);
+    animation: pencilAnimation 10s infinite;
+  
+    &__ballPoint {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #CF404D;
+      height: 6px;
+      width: 6px;
+      border-radius: 50px;
+    }
+  
+    &__cap {
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      clip-path: polygon(20% 40%, 100% 0%, 100% 100%, 20% 60%);
+      background: #2D3E4F;
+      width: 12%;
+      height: 100%;
+    }
+  
+    &__capBase {
+      position: absolute;
+      left: 12%;
+      top: 0;
+      height: 100%;
+      width: 20px;
+      background: #2D3E4F;
+    }
+  
+    &__middle {
+      position: absolute;
+      left: calc(12% + 20px);
+      top: 0;
+      height: 100%;
+      width: 70%;
+      background: #CF404D;
+    }
+  
+    &__eraser {
+      position: absolute;
+      left: calc(12% + 70% + 20px);
+      top: 0;
+      height: 100%;
+      width: 11%;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: #2D3E4F;
+    }
+  }
+  
+  .line {
+    @keyframes lineAnimation {
+      20% {
+        transform: scaleX(0);
+      }
+  
+      45% {
+        transform: scaleX(0.6);
+      }
+  
+      55% {
+        transform: scaleX(0.6);
+      }
+  
+      100% {
+        transform: scaleX(0);
+      }
+    }
+  
+    position: relative;
+    top: 35px;
+    right: 48px;
+    height: 10px;
+    width: 1000px;
+    z-index: -1;
+    border-radius: 50px;
+    background: #CF404D;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: lineAnimation 10s infinite;
+  }
+  
+  .text {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2D3E4F;
+  }

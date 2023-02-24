@@ -1,0 +1,10 @@
+.svg {
+
+    &:hover {
+        fill: aqua;
+
+        path {
+            fill: aqua;
+        }
+    }
+}

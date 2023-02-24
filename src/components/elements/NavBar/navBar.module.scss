@@ -1,0 +1,126 @@
+.menu {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+
+    width: 320px;
+    height: 100%;
+
+    background: #2D3E4F;
+
+    transition: transform cubic-bezier(0.39, 0.58, 0.57, 1) .2s;
+
+    &__blur {
+        display: none;
+    }
+
+
+    @media (max-width: 991.98px) {
+        transform: translateX(-100%);;
+    }
+    &__blur {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        width: calc(100vw + 320px);
+        height: 100%;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.273);
+
+        transition: all linear .2s;
+    }
+
+    &.active {
+        transform: translateX(0%);
+        .menu__blur {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: unset;
+        }
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        padding: 10px 31px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__menuBlock {
+        width: 100%;
+        flex: 1 1 auto;
+
+        display: flex;
+        align-items: center;
+    }
+    /* .menu__list */
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        gap: 30px;
+        
+    }
+
+    /* .menu__header */
+
+    &__header {
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: #CF404D;
+
+        margin-bottom: 30px;
+
+        span   {
+            margin-top: .5rem;
+            text-align: center;
+            display: block;
+            font-family: "Jost";
+            font-weight: 400;
+            font-size: .7rem;
+            color: #fff;
+        }
+    }
+
+    /* .menu__link */
+
+    &__link {
+        padding: 5px;
+        font-size: 15px;
+
+        cursor: pointer;
+
+        transition: color linear .2s;
+
+        &.active {
+            color: #CF404D;
+        }
+
+        &:hover {
+            color: #CF404D;
+        }
+    }
+
+    /* .menu__social-Block */
+
+    &__socialBlock {
+        flex: 0 0 auto;
+    }
+
+}
+

@@ -1,0 +1,100 @@
+.serviceItem {
+    position: relative;
+    padding: 1rem;
+
+    /* .service-item__logo */
+
+    &__logo {
+        position: relative;
+        height: 6.5rem;
+        margin-bottom: 1.5rem;
+        &::before {
+            color: rgb(22, 22, 22);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(1rem, -50%);
+        }
+    }
+
+    /* .service-item__title */
+
+    &__title {
+
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        color: #313131;
+
+        margin-bottom: 1.3rem;
+    }
+
+    /* .service-item__discription */
+
+    &__discription {
+        display:inline-block;
+        min-width: 10rem;
+        line-height: 1.333rem;
+        color: rgba(0, 0, 0, 0.74);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+
+        margin-bottom: 0.5rem;
+    }
+
+    /* .service-item__add */
+
+    &__add {
+        cursor: pointer;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        color: #CF404D;
+    }
+
+    .allTextWrapper {
+        min-width: 250px;
+        z-index: 4;
+
+        background: #fff;
+        padding: 2rem;
+        line-height: 1.333rem;
+        color: rgba(0, 0, 0, 0.74);
+        position: absolute;
+        bottom: 2.5rem;
+        left: 0;
+        transition: all linear .2s;
+
+        span {
+            display: block;
+        }
+    }
+    &:nth-child(2) {
+        .allTextWrapper {
+            @media (max-width: 641px) {
+                transform: translateX(-43%);
+            }
+            @media (max-width: 400px) {
+                transform: translateX(0%);
+            }
+        }
+    }
+    &:last-child {
+        .allTextWrapper {
+            
+            transform: translateX(-43%);
+            
+            @media (max-width: 400px) {
+                transform: translateX(0%);
+            }
+        }
+    }
+}

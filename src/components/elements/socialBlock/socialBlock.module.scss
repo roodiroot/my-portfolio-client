@@ -1,0 +1,31 @@
+.socialBlock {
+    margin-top: auto;
+
+    display: flex;
+    justify-content: center;
+    
+    gap: 4px;
+
+    /* .social-Block__link */
+
+    &__link {
+        font-size: 15px;
+        padding: 3px;
+        cursor: pointer;
+        &::before {
+            color: #fff;
+            transition: color linear .2s;
+        }
+        &:hover{
+            &::before {
+                color: #CF404D;
+            }
+        }
+        svg {
+            transition: all linear .2s;
+        }
+        svg:hover {
+            fill: #CF404D;
+        }
+    }
+}
